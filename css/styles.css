@@ -99,6 +99,19 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .metrics.metrics-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .skills.skills-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .insight-label { padding-top: 8px; }
+.chart { margin: 4px 0 0; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.chart figcaption { font-weight: 500; line-height: 1.4; display: flex; flex-direction: column; gap: 6px; }
+.chart .bars { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.chart .bars li { display: grid; grid-template-columns: minmax(0, 13em) minmax(0, 1fr); gap: 4px 14px; align-items: center; font-size: 14px; line-height: 1.3; }
+.chart .track { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.chart .fill { flex: none; height: 14px; width: calc(var(--w) * .85); min-width: 2px; background: var(--accent); border-radius: 3px; }
+.chart .v { font-family: var(--mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.charts-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.charts-2 .chart .bars li { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 620px) {
+  .charts-2 { grid-template-columns: minmax(0, 1fr); }
+  .chart .bars li { grid-template-columns: minmax(0, 1fr); }
+}
 .quote { margin: 0; padding-left: 16px; border-left: 2px solid var(--accent); font-size: 18px; font-weight: 500; }
 @media (max-width: 860px) { .skills.skills-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 620px) { .metrics.metrics-3, .skills.skills-4 { grid-template-columns: minmax(0, 1fr); } }
