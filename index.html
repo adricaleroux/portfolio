@@ -27,8 +27,8 @@
     </div>
     <div class="contact">
       <span>Córdoba, Argentina</span>
-      <span><span id="mail">adrianamcalero@gmail.com</span><button class="copy" id="copy-mail" data-target="mail" type="button">Copiar</button></span>
-      <span><span id="tel">+54 351 282 3186</span><button class="copy" id="copy-tel" data-target="tel" type="button">Copiar</button></span>
+      <span><button class="reveal" data-reveal="mail" type="button">Ver email</button><span id="mail" data-field="mail" aria-live="polite"></span><button class="copy" id="copy-mail" data-target="mail" type="button" hidden>Copiar</button></span>
+      <span><button class="reveal" data-reveal="tel" type="button">Ver teléfono</button><span id="tel" data-field="tel" aria-live="polite"></span><button class="copy" id="copy-tel" data-target="tel" type="button" hidden>Copiar</button></span>
       <a href="https://www.linkedin.com/in/adricalero" target="_blank" rel="noopener">linkedin.com/in/adricalero ↗</a>
     </div>
   </header>
@@ -238,7 +238,7 @@
 
   <footer>
     <span class="big">Hablemos</span>
-    <span class="eyebrow">adrianamcalero@gmail.com · +54 351 282 3186</span>
+    <span class="eyebrow"><button class="reveal" data-reveal="mail" type="button">Ver email</button><span data-field="mail" aria-live="polite"></span> · <button class="reveal" data-reveal="tel" type="button">Ver teléfono</button><span data-field="tel" aria-live="polite"></span></span>
   </footer>
 </div>
 

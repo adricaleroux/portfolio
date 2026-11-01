@@ -52,6 +52,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .contact span, .contact a { display: inline-flex; align-items: center; gap: 8px; }
 .copy { font: inherit; font-size: 12px; font-family: var(--mono); background: none; border: 1px solid var(--line); color: var(--muted); padding: 2px 8px; border-radius: 999px; cursor: pointer; }
 .copy:hover { border-color: var(--accent); color: var(--accent-ink); }
+.copy[hidden], .reveal[hidden] { display: none; }
+.reveal { font: inherit; letter-spacing: inherit; text-transform: inherit; background: none; border: 0; padding: 0; color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.reveal:hover { color: var(--accent); }
 
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 340px); gap: 32px 48px; align-items: end; }
 .hero-main { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
