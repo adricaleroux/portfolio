@@ -96,6 +96,12 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .back { font-family: var(--mono); font-size: 13px; text-decoration: none; }
 .back:hover { text-decoration: underline; }
 .case-title { font-family: var(--display); font-weight: 400; color: var(--accent); font-size: clamp(44px, 8vw, 96px); line-height: .92; text-transform: uppercase; max-width: 18ch; }
+.metrics.metrics-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.skills.skills-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.insight-label { padding-top: 8px; }
+.quote { margin: 0; padding-left: 16px; border-left: 2px solid var(--accent); font-size: 18px; font-weight: 500; }
+@media (max-width: 860px) { .skills.skills-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .metrics.metrics-3, .skills.skills-4 { grid-template-columns: minmax(0, 1fr); } }
 
 /* Competencias */
 .skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 40px; }
