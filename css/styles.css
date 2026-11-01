@@ -82,6 +82,21 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .metric .what { font-weight: 500; font-size: 15px; line-height: 1.35; }
 .metric .where { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-top: auto; }
 
+/* Casos de estudio */
+.cases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.case-card { display: flex; flex-direction: column; gap: 14px; min-height: 220px; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; text-decoration: none; color: var(--fg); transition: border-color .2s, transform .2s; min-width: 0; }
+.case-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.case-card h3 { font-family: var(--display); font-weight: 400; font-size: clamp(24px, 2.6vw, 30px); text-transform: uppercase; line-height: 1.05; color: var(--accent); }
+.case-card .go { margin-top: auto; font-family: var(--mono); font-size: 12px; color: var(--accent-ink); }
+@media (max-width: 860px) { .cases { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .cases { grid-template-columns: minmax(0, 1fr); } .case-card { min-height: 0; } }
+@media (prefers-reduced-motion: reduce) { .case-card { transition: none; } }
+
+/* Página de caso */
+.back { font-family: var(--mono); font-size: 13px; text-decoration: none; }
+.back:hover { text-decoration: underline; }
+.case-title { font-family: var(--display); font-weight: 400; color: var(--accent); font-size: clamp(44px, 8vw, 96px); line-height: .92; text-transform: uppercase; max-width: 18ch; }
+
 /* Competencias */
 .skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 40px; }
 .skill { display: flex; flex-direction: column; gap: 8px; padding-top: 14px; border-top: 2px solid var(--accent); }
