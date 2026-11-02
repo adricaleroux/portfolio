@@ -10,6 +10,19 @@ document.querySelectorAll('.reveal').forEach(function (btn) {
   });
 });
 
+// Descargar PDF: muestra mail y teléfono, carga las fotos diferidas y abre el diálogo de impresión.
+document.querySelectorAll('.pdf-btn').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('.reveal').forEach(function (b) { if (!b.hidden) b.click(); });
+    var pending = Array.prototype.map.call(document.images, function (img) {
+      img.loading = 'eager';
+      if (img.complete) return null;
+      return new Promise(function (resolve) { img.onload = img.onerror = resolve; });
+    });
+    Promise.all(pending).then(function () { window.print(); });
+  });
+});
+
 document.querySelectorAll('.copy').forEach(function (btn) {
   btn.addEventListener('click', function () {
     var el = document.getElementById(btn.dataset.target);

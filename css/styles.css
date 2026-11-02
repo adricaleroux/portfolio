@@ -53,8 +53,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .copy { font: inherit; font-size: 12px; font-family: var(--mono); background: none; border: 1px solid var(--line); color: var(--muted); padding: 2px 8px; border-radius: 999px; cursor: pointer; }
 .copy:hover { border-color: var(--accent); color: var(--accent-ink); }
 .copy[hidden], .reveal[hidden] { display: none; }
-.reveal { font: inherit; letter-spacing: inherit; text-transform: inherit; background: none; border: 0; padding: 0; color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
-.reveal:hover { color: var(--accent); }
+.reveal, .pdf-btn { font: inherit; letter-spacing: inherit; text-transform: inherit; background: none; border: 0; padding: 0; color: var(--accent-ink); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.reveal:hover, .pdf-btn:hover { color: var(--accent); }
 
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 340px); gap: 32px 48px; align-items: end; }
 .hero-main { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
@@ -208,4 +208,21 @@ footer .big { font-family: var(--display); font-size: clamp(32px, 6vw, 56px); te
 @media (prefers-reduced-motion: no-preference) {
   .name { animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
   @keyframes rise { from { transform: translateY(14px); } to { transform: none; } }
+}
+
+/* Versión para imprimir / guardar como PDF */
+@media print {
+  :root, :root:not([data-theme="light"]) {
+    --bg: #ffffff; --surface: #ffffff; --fg: #1d1a1e; --muted: #6c6470; --line: #ddd6de;
+    --accent: #e01ec4; --accent-ink: #b5139d; --accent-soft: #fbe3f7; color-scheme: light;
+  }
+  @page { margin: 14mm; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { padding: 0; }
+  .wrap { max-width: none; padding-block: 0; gap: 40px; zoom: .8; }
+  .name { animation: none; }
+  .copy, .reveal, .pdf-btn, .case-card.soon, .case-card .go, .clip .go { display: none !important; }
+  .sec-head { break-after: avoid; }
+  .metric, .skill, .edu-item, .shot, .clip, .case-card, .talks li, .chart, .job li { break-inside: avoid; }
+  .job h3, .job .when { break-after: avoid; }
 }
