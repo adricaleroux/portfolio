@@ -115,6 +115,13 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   .charts-2 { grid-template-columns: minmax(0, 1fr); }
   .chart .bars li { grid-template-columns: minmax(0, 1fr); }
 }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+.compare { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 560px; }
+.compare th, .compare td { text-align: left; padding: 14px 16px; border-top: 1px solid var(--line); vertical-align: top; }
+.compare thead th { border-top: 0; font-family: var(--mono); font-size: 12px; font-weight: 400; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.compare tbody th { font-weight: 700; }
+.compare .hl { background: var(--accent-soft); }
+.compare .hl th { color: var(--accent-ink); }
 .quote { margin: 0; padding-left: 16px; border-left: 2px solid var(--accent); font-size: 18px; font-weight: 500; }
 @media (max-width: 860px) { .skills.skills-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 620px) { .metrics.metrics-3, .skills.skills-4 { grid-template-columns: minmax(0, 1fr); } }
