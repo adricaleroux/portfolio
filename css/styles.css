@@ -121,6 +121,18 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .case-img figcaption { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
 .scroll-x { overflow-x: auto; border-radius: 12px; }
 @media (max-width: 620px) { .scroll-x img { width: 900px; max-width: none; } }
+.case-img.phone img { border-radius: 20px; }
+.ui-row { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.ui-notes { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.notes { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 10px; }
+.notes li::marker { color: var(--accent); }
+.screens { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start; }
+@media (max-width: 760px) {
+  .ui-row { grid-template-columns: minmax(0, 1fr); }
+  .ui-row .case-img { max-width: 300px; }
+  .screens { grid-template-columns: minmax(0, 1fr); }
+  .screens .case-img { max-width: 340px; }
+}
 .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
 .compare { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 560px; }
 .compare th, .compare td { text-align: left; padding: 14px 16px; border-top: 1px solid var(--line); vertical-align: top; }
