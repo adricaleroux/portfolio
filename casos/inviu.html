@@ -36,6 +36,45 @@
     </div>
   </section>
 
+  <section class="sec" aria-labelledby="h-proto">
+    <div class="sec-head"><h2 id="h-proto">Probá el prototipo</h2></div>
+    <div class="proto-row">
+      <div class="proto">
+        <div class="proto-phone">
+        <div class="proto-screen" data-screen="inicio" aria-label="Inicio">
+          <div class="proto-canvas"><img src="../fotos/inviu-p-inicio.png" alt="Pantalla de Inicio" width="409" height="1466"><button class="hot" style="left:0.00%;top:39.20%;width:100.00%;height:3.27%" data-go="desempeno" type="button" aria-label="Ver desempeño de tu cartera"></button></div>
+          <div class="proto-tab"><img src="../fotos/inviu-p-inicio-tab.png" alt="" width="409" height="102"><button class="hot" style="left:20%;top:0;width:20%;height:100%" data-go="portafolio" type="button" aria-label="Ir a Portafolio"></button><button class="hot" style="left:60%;top:0;width:20%;height:100%" data-go="historial" type="button" aria-label="Ir a Historial"></button></div>
+        </div>
+        <div class="proto-screen" data-screen="desempeno" aria-label="Desempeño de la cartera" hidden>
+          <div class="proto-canvas"><img src="../fotos/inviu-p-desempeno.png" alt="Pantalla de Desempeño de la cartera" width="400" height="1568"><button class="hot" style="left:0.00%;top:2.72%;width:19.20%;height:3.26%" data-go="inicio" type="button" aria-label="Volver a Inicio"></button></div>
+          
+        </div>
+        <div class="proto-screen" data-screen="portafolio" aria-label="Portafolio" hidden>
+          <div class="proto-canvas"><img src="../fotos/inviu-p-portafolio.png" alt="Pantalla de Portafolio" width="334" height="1484"><button class="hot" style="left:4.27%;top:32.85%;width:91.47%;height:3.83%" data-sheet-open="cedear" type="button" aria-label="Ver detalle de AMD"></button></div>
+          <div class="proto-tab"><img src="../fotos/inviu-p-portafolio-tab.png" alt="" width="334" height="84"><button class="hot" style="left:0%;top:0;width:20%;height:100%" data-go="inicio" type="button" aria-label="Ir a Inicio"></button><button class="hot" style="left:60%;top:0;width:20%;height:100%" data-go="historial" type="button" aria-label="Ir a Historial"></button></div>
+        </div>
+        <div class="proto-screen" data-screen="historial" aria-label="Historial" hidden>
+          <div class="proto-canvas"><img src="../fotos/inviu-p-historial.png" alt="Pantalla de Historial" width="725" height="1387"></div>
+          <div class="proto-tab"><img src="../fotos/inviu-p-historial-tab.png" alt="" width="725" height="181"><button class="hot" style="left:0%;top:0;width:20%;height:100%" data-go="inicio" type="button" aria-label="Ir a Inicio"></button><button class="hot" style="left:20%;top:0;width:20%;height:100%" data-go="portafolio" type="button" aria-label="Ir a Portafolio"></button></div>
+        </div>
+          <div class="proto-sheet" data-sheet="cedear" hidden>
+            <button class="proto-dim" data-close type="button" aria-label="Cerrar detalle"></button>
+            <div class="proto-sheet-body"><img src="../fotos/inviu-cedear.png" alt="Detalle de AMD: unidades en portafolio y en garantía, precio promedio, monto invertido, precio actual, rendimiento y botones Vender y Comprar" width="724" height="1251"><button class="hot" style="left:86%;top:1%;width:13%;height:8%" data-close type="button" aria-label="Cerrar detalle"></button></div>
+          </div>
+        </div>
+      </div>
+      <div class="ui-notes">
+        <p class="role">Navegá la app como lo haría un inversor.</p>
+        <ul class="notes">
+          <li>En <b>Inicio</b>, tocá <b>Desempeño de tu cartera</b> para ver la evolución y el rendimiento; volvé con la flecha.</li>
+          <li>Usá la barra de abajo para ir a <b>Portafolio</b> y a <b>Historial</b>.</li>
+          <li>En Portafolio, tocá <b>AMD</b> para abrir la hoja de detalle del activo.</li>
+          <li>Las pantallas se desplazan, como en el teléfono.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="sec" aria-labelledby="h-portafolio">
     <div class="sec-head"><h2 id="h-portafolio">El portafolio</h2></div>
     <div class="ui-row">
@@ -75,6 +114,24 @@
     </div>
   </section>
 
+  <section class="sec" aria-labelledby="h-rendimiento">
+    <div class="sec-head"><h2 id="h-rendimiento">El rendimiento</h2></div>
+    <div class="ui-row">
+      <figure class="case-img phone">
+        <img src="../fotos/inviu-rendimientos.png" alt="Pantalla Rendimientos Argentina: patrimonio total, rendimiento de la cartera por período con montos y porcentajes, gráfico de evolución patrimonial con filtros de período y lista de rendimiento por activo con mini gráficos" width="398" height="1568" loading="lazy">
+        <figcaption>Rendimientos · Argentina</figcaption>
+      </figure>
+      <div class="ui-notes">
+        <p class="role">Cuánto rinde la cartera, <em>en cada período</em> y por activo.</p>
+        <ul class="notes">
+          <li><b>Rendimiento de la cartera</b> por período (ayer, 1 mes, 6 meses, 1 año, desde el inicio), en monto y porcentaje, calculado con la fórmula Time Weighted Rate of Return (TWRR).</li>
+          <li><b>Evolución patrimonial</b>: cómo cambia la valuación total, incluyendo depósitos y extracciones, con filtros de período.</li>
+          <li><b>Rendimiento de cada activo</b> en los últimos 30 días, ordenado de mejor a peor, con un mini gráfico de tendencia.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="sec" aria-labelledby="h-historial">
     <div class="sec-head"><h2 id="h-historial">El historial</h2></div>
     <div class="ui-row">
@@ -96,6 +153,8 @@
     <a class="back" href="../index.html#h-casos">← Volver a los casos</a>
   </footer>
 </div>
+
+<script src="../js/prototipo.js"></script>
 
 </body>
 </html>

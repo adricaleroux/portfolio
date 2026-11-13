@@ -133,6 +133,29 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   .screens { grid-template-columns: minmax(0, 1fr); }
   .screens .case-img { max-width: 340px; }
 }
+.proto-row { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 32px 48px; align-items: start; }
+.proto { width: 100%; max-width: 320px; }
+.proto-phone { position: relative; aspect-ratio: 375 / 812; border-radius: 36px; border: 8px solid #1d1a1e; background: #fff; overflow: hidden; box-shadow: 0 0 0 1px var(--line); }
+.proto-screen { position: absolute; inset: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none; display: flex; flex-direction: column; }
+.proto-screen[hidden], .proto-sheet[hidden] { display: none; }
+.proto-screen::-webkit-scrollbar { display: none; }
+.proto-canvas, .proto-tab { position: relative; flex: none; }
+.proto-canvas img, .proto-tab img { display: block; width: 100%; height: auto; }
+.proto-tab { position: sticky; bottom: 0; margin-top: auto; background: #fff; }
+.proto .hot { position: absolute; padding: 0; border: 0; background: transparent; cursor: pointer; border-radius: 8px; }
+.proto .hot:hover { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.proto .hot:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.proto-sheet { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; }
+.proto-dim { flex: 1; border: 0; padding: 0; background: rgba(0, 0, 0, .45); cursor: pointer; }
+.proto-sheet-body { position: relative; flex: none; animation: sheet-up .28s cubic-bezier(.2,.7,.2,1); }
+.proto-sheet-body img { display: block; width: 100%; height: auto; border-radius: 20px 20px 0 0; }
+@keyframes sheet-up { from { transform: translateY(100%); } to { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .proto-sheet-body { animation: none; } }
+@media (max-width: 760px) {
+  .proto-row { grid-template-columns: minmax(0, 1fr); }
+  .proto { margin-inline: auto; }
+}
+@media print { .proto-row { display: none; } }
 .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
 .compare { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 560px; }
 .compare th, .compare td { text-align: left; padding: 14px 16px; border-top: 1px solid var(--line); vertical-align: top; }
